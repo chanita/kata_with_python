@@ -1,10 +1,13 @@
 import unittest2
 class FizzBuzz:
     def count(self, number):
-        if number%15 == 0: return 'FizzBuzz'
-        if number%5 == 0: return 'Buzz'
-        if number%3 == 0: return 'Fizz'
-        return number 
+        output = "Fizz" if number%3==0 else ''
+        if number%5==0: output = output + "Buzz"
+        else: output=output+''
+        
+        if output=='': return str(number)
+        return output
+
 
 class FizzBuzzTest(unittest2.TestCase):
     def setUp(self):
